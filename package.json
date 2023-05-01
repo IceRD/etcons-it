@@ -1,0 +1,46 @@
+{
+	"name": "etcons-it",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc && vite build",
+		"preview": "vite preview",
+		"lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+	},
+	"dependencies": {
+		"primeflex": "^3.3.0",
+		"primeicons": "^6.0.1",
+		"primevue": "^3.27.0",
+		"vue": "^3.2.47",
+		"vue-facing-decorator": "^2.1.20",
+		"vue-router": "4"
+	},
+	"devDependencies": {
+		"@types/node": "^18.16.1",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
+		"@vitejs/plugin-vue": "^4.1.0",
+		"@vue/eslint-config-prettier": "^7.1.0",
+		"@vue/eslint-config-typescript": "^11.0.3",
+		"eslint": "^8.39.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-vue": "^9.11.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.2",
+		"prettier": "^2.8.8",
+		"typescript": "^5.0.2",
+		"vite": "^4.3.2",
+		"vue-tsc": "^1.4.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,vue}": "eslint --fix",
+		"*": "prettier -w -u"
+	}
+}
